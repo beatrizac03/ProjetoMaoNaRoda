@@ -1,0 +1,35 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+
+.bory{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.section{
+    width: 60%;
+    max-width: 600px;
+}
+
+section details summary{
+    background-color: tomato;
+    padding: 2%;
+    border-bottom: 2px solid #282828;
+    color: #fff;
+    font-weight: 600;
+
+}
+section details p{
+    background-color: black;
+    color: #fff;
+    padding: 2%;
+}
