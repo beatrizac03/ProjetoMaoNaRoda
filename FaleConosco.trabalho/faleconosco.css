@@ -1,0 +1,33 @@
+header {
+  height: 200px;
+  background: black;
+}
+
+header h1 { 
+  padding: 40px 50px 10px 50px;
+  color: #E12929;
+}
+
+header p {
+  padding: 0px 50px;
+  color: white;
+}
+.container{
+  background-color: white;
+  margin-top: 50px;
+}
+.fonte_red{
+  color: #E12929;
+}
+
+.back{
+  background-color: #E2DBCC;
+
+}
+button{
+  background-color: #E12929;
+  padding: 10px ;
+  width: 100px;
+  border-radius: 50px;
+  color: white;
+}
