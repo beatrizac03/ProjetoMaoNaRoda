@@ -1,0 +1,308 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    font-size: 2rem;
+    font-family: 'Sondos';
+    overflow-x: hidden;
+    background-color: #242424;
+}
+
+
+/* HEADER E NAVBAR*/
+
+.offcanvas-body ul li{
+    list-style: none;
+    margin-bottom: 3rem;
+}
+
+.offcanvas-body ul li a{
+    text-decoration: none;
+    font-size: 2rem;
+    color: #E12929;
+    transition: all 0.4s ease;
+}
+
+.offcanvas-body ul li a:hover{
+    color:#242424;
+}
+
+#navbarprincipal{
+    background-color: #242424;
+}
+
+header{
+    background-color: #242424;
+    width: 100vw;
+    height: 6rem;
+}
+
+.navbar-brand{
+    width: 20rem;
+    height: 4.4rem;
+}
+
+.navbar-brand img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+}
+
+.nav-item{
+    border: none;
+}
+
+.IMAGEM {
+    position: absolute;
+    width: 187.7rem;
+    height: 62rem;
+}
+
+.CAIXA {
+    position: relative;
+    left: 34%;
+    top: 50rem; 
+    width: 60rem;
+    height: 30rem;
+    background-color: #960018;
+    color: white;
+    font-size: 10rem;
+    text-align: center;
+}
+
+.PRINCIPAL {
+    top: 130%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    width: 180rem;
+    height: 62rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.PRIMEIRO{
+    border: 0.3rem solid #cccccc;
+    background-color: #aaa9a9;
+    height: 50rem;
+    width: 30rem;
+    margin: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;  
+
+}
+
+.SEGUNDO{
+    border: 0.3rem solid #cccccc;
+    background-color: #aaa9a9;
+    height: 50rem;
+    width: 30rem;
+    margin: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.TERCEIRO{
+    border: 0.3rem solid #cccccc;
+    background-color: #aaa9a9;
+    height: 50rem;
+    width: 30rem;
+    margin: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.QUARTO{
+    border: 0.3rem solid #cccccc;
+    background-color: #aaa9a9;
+    height: 50rem;
+    width: 30rem;
+    margin: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.QUINTO{
+    border: 0.3rem solid #cccccc;
+    background-color: #aaa9a9;
+    height: 50rem;
+    width: 30rem;
+    margin: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.PEQUENO1{
+
+    height: 10rem;
+    width: 10rem;
+}
+
+.PEQUENO2{
+
+    height: 10rem;
+    width: 10rem;
+}
+
+.PEQUENO3{
+
+    height: 10rem;
+    width: 10rem;
+}
+
+.PEQUENO4{
+
+    height: 10rem;
+    width: 10rem;
+}
+
+.PEQUENO5{
+
+    height: 10rem;
+    width: 10rem;
+}
+
+.TEXTO1{
+    
+    position: absolute;
+    height: 35rem;
+    width: 23rem;
+    top: 30%;
+    left: 3%;
+    font-weight: bold; 
+    color: #ffffff; 
+    font-size: 2rem;
+}
+
+.TEXTO2{
+
+    position: absolute;
+    height: 35rem;
+    width: 23rem;
+    top: 30%;
+    left: 23.5%;
+    font-weight: bold; 
+    color: #ffffff; 
+    font-size: 2rem;
+}
+
+.TEXTO3{
+
+    position: absolute;
+    height: 35rem;
+    width: 23rem;
+    top: 30%;
+    left: 43.5%;
+    font-weight: bold; 
+    color: #ffffff; 
+    font-size: 2rem;
+}
+
+.TEXTO4{
+
+    position: absolute;
+    height: 35rem;
+    width: 23rem;
+    top: 30%;
+    left: 64%;
+    font-weight: bold; 
+    color: #ffffff; 
+    font-size: 2rem;
+}
+
+.TEXTO5{
+
+    position: absolute;
+    height: 35rem;
+    width: 23rem;
+    top: 30%;
+    left: 84.5%;
+    font-weight: bold; 
+    color: #ffffff; 
+    font-size: 2rem;
+}
+
+.CAIXA2{
+
+    position: absolute;
+    top: 160%;
+    height: 50.6rem;
+    width: 187rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.Item1{
+    
+    width: 50rem;
+    height: 50rem;  
+}
+
+.Item2{
+    
+    width: 130rem;
+    height: 50rem;
+    display: flex;
+    justify-content: space-between; 
+}
+
+.CAIXINHA1{
+
+    width: 64rem;
+    height: 49.5rem;
+    color: white;
+    text-align: justify;
+    font-size: 1.5rem;
+    border: 0.5rem solid rgba(243, 243, 242, 0.021);
+}
+
+.CAIXINHA2{
+ 
+    width: 64rem;
+    height: 49.5rem;
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1.6rem;
+    text-align: center;
+}
+
+.CAIXINHA3{
+
+    width: 64.5rem;
+    height: 29rem;
+}
+
+.CAIXINHA4{
+   
+    width: 64.5rem;
+    height: 20rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.BOTÃO{
+
+      padding: 3rem 12rem;
+      font-size: 5rem;
+      color: #ffffff;
+      font-weight: bold;
+      border-radius: 3rem; 
+      background-color: #ff0000; 
+      border: 2px solid #8d2715; 
+}
