@@ -1,0 +1,736 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+*:focus{
+    outline: none;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    font-size: 2rem;
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+    font-family: 'roboto', sans-serif;
+    background: #1a1919;
+}
+
+::-webkit-scrollbar{
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb{
+    background: #e0a91c;
+    border-radius: 20px;
+}
+
+::selection{
+    background: #e0a91c;
+}
+
+/* ANIMAÇÃO DA LOGO */
+
+.anim-container{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.shutter{
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    background: #000;
+}
+
+.shutter.top{
+    top: 0;
+    z-index: 2;
+    animation: slide-top 2s 2.5s forwards 1;
+}
+
+.shutter.bottom{
+    bottom: 0;
+    animation: slide-top 2s 2.5s forwards 1;
+}
+
+.shutter.top .logo{
+    position: absolute;
+    height: 250px;
+    bottom: -125px;
+
+    left: 50%;
+    transform: translateX(-50%) rotateY(90deg);
+    z-index: 2;
+    animation: logo_anim .5s 1s forwards 1;
+}
+
+@keyframes logo_anim{
+     0%{
+        transform: translateX(-50%) rotateY(90deg);
+     }
+     100%{
+        transform: translateX(-50%);
+     }
+}
+
+.shutter.top::after{
+    content: '';
+    position: absolute;
+    height: 3px;
+    width: 100%;
+    background: #fff;
+    bottom: 0;
+    left: -100%;
+    animation: slide-in-out 1s 1.5s forwards 1;
+
+}
+
+@keyframes slide-in-out{
+    0%{
+       left: -100%;
+    }
+    100%{
+       left: 100%;
+    }
+}
+
+@keyframes slide-top{
+    0%{
+        top: 0;
+    }
+    100%{
+        top: -100%;
+    }
+}
+
+@keyframes slide-bottom{
+    0%{
+        bottom: 0;
+    }
+    100%{
+        bottom: -100%;
+    }
+}
+
+/*  CONTEUDO IMAGEM */
+
+.FiatToroFoto {
+    width: 128rem;
+    height: 80rem;
+    float: right;
+}
+
+
+.FiatToroFoto img{
+width: 100%; 
+margin-top: 8rem;   
+}
+
+/*  CONTEUDO TEXTO */
+
+.Primeiro {
+    text-align: center;
+    position: absolute;
+    top: 2%;
+    left: -30%;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    font-size: 10rem;
+    padding: 1rem;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    width: 100vw;
+}
+
+.Segundo {
+    text-align: center;
+    position: absolute;
+    top: 3.9%;
+    left: -30%;
+    text-align: center;
+    color: red;
+    font-size: 12rem;
+    padding: 1.2rem;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    letter-spacing: 1rem;
+    width: 100vw;
+}
+
+.Terceiro {
+    width: 100vw;
+    text-align: center;
+    position: absolute;
+    top: 5.7%;
+    left: -30%;
+    color: rgb(255,255,255);
+    font-size: 10rem;
+    padding: 1.2rem;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif
+
+}
+
+.Quarto {
+    text-align: center;
+    width: 100vw;
+    position: absolute;
+    top: 7.5%;
+    left: -30%;
+    color: red;
+    font-size: 12rem;
+    padding: 1.2rem;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    letter-spacing: 1rem;
+}
+
+/*  CONTEUDO RETÂNGULOS TOMBADOS*/
+
+.R1{
+    width: 100vw;
+    text-align: center;
+    position: absolute;
+    top: 11%;
+    left: 11%;
+    width: 6rem;
+    height: 20rem;
+    background-color: white;
+    transform: skew(-20deg);
+}
+
+.R2{
+    width: 100vw;
+    text-align: center;
+    position: absolute;
+    top: 11%;
+    left: 15%;
+    width: 6rem;
+    height: 20rem;
+    background-color: red;
+    transform: skew(-20deg);
+}
+
+.R3{
+    width: 100vw;
+    text-align: center;
+    position: absolute;
+    top: 11%;
+    left: 19%;
+    width: 6rem;
+    height: 20rem;
+    background-color: green;
+    transform: skew(-20deg);
+}
+
+.R4{
+    width: 100vw;
+    text-align: center;
+    position: absolute;
+    top: 11%;
+    left: 23%;
+    width: 6rem;
+    height: 20rem;
+    background-color: white;
+    transform: skew(-20deg);
+}
+
+/*  CAROUSEL */
+
+.Toro-carousel{
+     position: relative;
+     width: 100%;
+     height: 100vh;
+}
+
+.carousel{
+     position: absolute;
+     top: 87%;
+     left: 0;
+     width: 100%;
+     height: 100%;
+     background-image: url(IMAGENS/FIATTOROAZUL.png);
+     background-size: cover;
+     background-position: center center;
+     padding-left: 5vw;
+     padding-top: 20vh;
+}
+
+.carousel:nth-child(2){
+     background: url(IMAGENS/FIATTOROBRANCO.png);
+     background-size: cover;
+     z-index: -1;
+}
+  
+.carousel:nth-child(3){
+    background: url(IMAGENS/FIATTOROVERMELHO.png);
+    background-size: cover;
+    z-index: -1;
+}
+
+.carousel .title{
+     color: #fff;
+     font-size: 120px;
+     text-transform: uppercase;
+     opacity: 0;
+}
+
+.btn2{
+     opacity: 0;
+     width: 150px;
+     height: 40px;
+     margin-top: 20px;
+     background: none;
+     color: #fff;
+     text-transform: capitalize;
+     font-size: 16px;
+     cursor: pointer .5s;
+     text-align: left;
+     padding-left: 30px;
+     position: relative;
+     border: none;
+     clip-path: polygon(0 0,  82% 0, 100% 100%, 0% 100%);
+}
+
+.btn2::before{
+     content: '';
+     position: absolute;
+     top: 0;
+     left: 0;
+     right: 0;
+     bottom: 0;
+     background-image: url(IMAGENS/btn.png);
+     background-size: 100% 100%;
+}
+
+.btn2:hover{
+     background: #fff;
+     color: #000;
+}
+
+.carousel.active{
+    z-index: 2;
+}
+
+.carousel.active .title,
+.carousel.active .btn2{
+    opacity: 0;
+    animation: fade-up 1s forwards 1;
+}
+
+@keyframes fade-up{
+    0%{
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+.indicators{
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 15px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    cursor: pointer;
+    z-index: 3;
+}
+
+.indicators span{
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    transition: .5s;
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.indicators span.active{
+    background: #000;
+}
+
+.navbar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 80px;
+    z-index: 8;
+}
+
+.brand-logo{
+    height: 60px;
+}
+
+.brand-name{
+    color: #fff;
+    font-size: 20px;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+.model-container{
+    margin-top: 47%;
+    width: 100%;
+    height: 60vh;
+    position: relative;
+    overflow: hidden;
+    background: #000;
+    padding: 20px 1vw;
+    z-index: 3;
+}
+
+.model-img{
+    position: absolute;
+    top: 0;
+    max-width: 50%;
+    min-height: 100%;
+    clip-path: polygon(0 0, 100% 0, 70% 100%, 0% 100%);
+}
+
+.model-img:nth-child(3){
+    left: 0;
+}
+
+.model-img:nth-child(2){
+    right: 20%;
+}
+
+.model-img:nth-child(1){
+    right: -15%;
+}
+
+.model-content{
+    position: relative;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.heading{
+    font-size: 40px;
+}
+
+.model-name{
+    font-size: 120px;
+    margin: 40px;
+}
+
+.VALORES{
+    display: flex;
+    align-items: self-end;
+    position: static;
+    width: 186.7rem;
+    height: 35rem;
+    margin-top: 4rem;
+}
+
+.item1{
+    color: #fff;
+    font-size: 14rem;
+    font-family: fantasy;
+}
+
+.item2{
+    top: 47.5%;
+    position: absolute;
+    left: 47%;
+    text-align: center;
+    background-color: #ff0000;
+    height: 7rem;
+    width: 36rem;
+    border-top-left-radius: 2rem;
+    border-top-right-radius: 2rem;
+    border-bottom-left-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+    font-size: 6rem;
+    color: #fff;
+}
+
+.item3{
+    top: 44.5%;
+    position: absolute;
+    left: 47%;
+    text-align: center;
+    background-color: #ff0000;
+    height: 7rem;
+    width: 36rem;
+    border-top-left-radius: 2rem;
+    border-top-right-radius: 2rem;
+    border-bottom-left-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+    font-size: 5.4rem;
+    color: #fff;
+}
+
+.item4{
+    top: 44.6%;
+    position: absolute;
+    left: 70%;
+    text-align: center;
+    background-color: #ff0000;
+    height: 6.1rem;
+    width: 53rem;
+    border-top-left-radius: 2rem;
+    border-top-right-radius: 2rem;
+    border-bottom-left-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+    font-size: 5rem;
+    color: #fff;
+}
+
+.item5{
+    top: 47.6%;
+    position: absolute;
+    left: 70%;
+    text-align: center;
+    background-color: #ff0000;
+    height: 6.1rem;
+    width: 53rem;
+    border-top-left-radius: 2rem;
+    border-top-right-radius: 2rem;
+    border-bottom-left-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+    font-size: 4.8rem;
+    color: #fff;
+}
+
+.TUDOSOBRE{
+
+    margin-top: 2rem; 
+    margin-bottom: 2rem; 
+    margin-left: auto; 
+    margin-right: auto; 
+    width: 150rem;
+    height: 30rem;
+    color: #fff;
+    font-size: 12rem;
+    text-align: center;
+    background-color: #0f0d0d;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.R5{
+    position: absolute;
+    width: 20rem; 
+    height: 10rem; 
+    background-color: #ffffff; 
+    transform: skew(-20deg);
+    width: 100vw;
+    top: 50.5%;
+    left: 13%;
+    width: 6rem;
+    height: 25rem;
+}
+
+.R6{
+    position: absolute;
+    width: 20rem; 
+    height: 10rem; 
+    background-color: #ff0000; 
+    transform: skew(-20deg);
+    width: 100vw;
+    top: 50.3%;
+    left: 20%;
+    width: 6rem;
+    height: 25rem;
+}
+
+.R7{
+    position: absolute;
+    width: 20rem; 
+    height: 10rem; 
+    background-color: #ffffff; 
+    transform: skew(20deg);
+    width: 100vw;
+    top: 50.5%;
+    left: 83%;
+    width: 6rem;
+    height: 25rem;
+}
+
+.R8{
+    position: absolute;
+    width: 20rem; 
+    height: 10rem; 
+    background-color: #ff0000; 
+    transform: skew(20deg);
+    width: 100vw;
+    top: 50.3%;
+    left: 76%;
+    width: 6rem;
+    height: 25rem;
+}
+
+.Design, .Caixa1 {
+    margin-top: 4rem;
+    margin-bottom: 0.1rem;
+    height: 60rem;
+}
+
+.Design {
+    width: 60rem;
+    display: inline-block;
+}
+
+.Caixa1 {
+    width: 125rem;
+    display: inline-block;
+    background-color: #0f0d0d;
+}
+
+.RetanguloVermelho1 {
+    position: absolute;
+    width: 10rem; 
+    height: 16rem; 
+    top: 55.7%;
+    left: 34%;
+    background-color: #ff1900; 
+    font-size: 8rem;
+    color: #fff;
+}
+
+.TEXTO01{
+    position: absolute;
+    text-align: center;
+    width: 100vw;
+    top: 58%;
+    left: 16%;
+    color: #fff;
+    font-size: 5rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.Design2, .Caixa2 {
+    margin-top: 4rem;
+    margin-bottom: 0.1rem;
+    height: 60rem;
+}
+
+.Caixa2 {
+    width: 125rem;
+    display: inline-block;
+    background-color: #0f0d0d;
+}
+
+.Design2 {
+    width: 60rem;
+    display: inline-block;
+}
+
+.RetanguloVermelho2 {
+    position: absolute;
+    width: 10rem; 
+    height: 16rem; 
+    top: 66.9%;
+    left: 34%;
+    background-color: #ff1900; 
+    font-size: 8rem;
+    color: #fff;
+}
+
+.TEXTO02{
+    position: absolute;
+    text-align: center;
+    width: 100vw;
+    top: 70%;
+    left: 16%;
+    color: #fff;
+    font-size: 3.1rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.Design3, .Caixa3 {
+    margin-top: 4rem;
+    margin-bottom: 0.1rem;
+    height: 60rem;
+}
+
+.Design3 {
+    width: 60rem;
+    display: inline-block;
+}
+
+.Caixa3 {
+    width: 125rem;
+    display: inline-block;
+    background-color: #0f0d0d;
+}
+
+.RetanguloVermelho3 {
+    position: absolute;
+    width: 10rem; 
+    height: 16rem; 
+    top:78.1%;
+    left: 34%;
+    background-color: #ff1900; 
+    font-size: 7rem;
+    color: #fff;
+}
+
+.TEXTO03{
+    position: absolute;
+    text-align: center;
+    width: 100vw;
+    top: 81%;
+    left: 15.6%;
+    color: #fff;
+    font-size: 3.8rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.Design4, .Caixa4 {
+    margin-top: 4rem;
+    margin-bottom: 0.1rem;
+    height: 60rem;
+}
+
+.Design4 {
+    width: 60rem;
+    display: inline-block;
+}
+
+.Caixa4 {
+    width: 125rem;
+    display: inline-block;
+    background-color: #0f0d0d;
+}
+
+.RetanguloVermelho4 {
+    position: absolute;
+    width: 10rem; 
+    height: 16rem; 
+    top: 89.2%;
+    left: 34%;
+    background-color: #ff1900; 
+    font-size: 7rem;
+    color: #fff;
+}
+
+.TEXTO04{
+    position: absolute;
+    text-align: center;
+    width: 100vw;
+    top: 92.5%;
+    left: 15.6%;
+    color: #fff;
+    font-size: 3.8rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
